@@ -170,7 +170,8 @@ def handle_all_messages(message):
     except Exception as e:
         print("Ошибка поиска:", e)
 
-    bot.send_message(chat_id, f"❌ Монета {clean_ticker} не найдена. Проверь правильность написания тикера.", parse_mode="Markdown")def broadcast_signal(msg, photo_url):
+    bot.send_message(chat_id, f"❌ Монета {clean_ticker} не найдена. Проверь правильность написания тикера.", parse_mode="Markdown")
+    def broadcast_signal(msg, photo_url):
     for user_id in list(authorized_users):
         try:
             if photo_url:
