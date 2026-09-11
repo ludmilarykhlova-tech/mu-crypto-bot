@@ -219,7 +219,7 @@ def check_market():
         
         time.sleep(15)
 
-if name == 'main':
+if __name__ == '__main__':
     threading.Thread(target=check_market, daemon=True).start()
     print("Бот запущен и ждет пользователей...")
     bot.polling(none_stop=True)
